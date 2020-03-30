@@ -4,12 +4,8 @@ import urllib.request
 import codecs
 
 url = 'http://covidtracking.com/api/states/daily.csv'
-
-ftpstream = urllib.request.urlopen(url)
-input_data = csv.reader(codecs.iterdecode(ftpstream, 'utf-8'))
-
-# input_file = 'states-daily.csv'
-# input_data = csv.reader(open(input_file), delimiter=',')
+web_data = urllib.request.urlopen(url)
+input_data = csv.reader(codecs.iterdecode(web_data, 'utf-8'))
 
 data = []
 dates = []

@@ -7,11 +7,8 @@ import ssl
 url = 'http://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv'
 context = ssl._create_unverified_context()
 
-ftpstream = urllib.request.urlopen(url, context=context)
-input_data = csv.reader(codecs.iterdecode(ftpstream, 'utf-8'))
-
-# input_file = '/Users/tattcom-mbp/Downloads/covid-19-data-master/us-states.csv'
-# input_data = csv.reader(open(input_file), delimiter=',')
+web_data = urllib.request.urlopen(url, context=context)
+input_data = csv.reader(codecs.iterdecode(web_data, 'utf-8'))
 
 data = []
 dates = []

@@ -1,3 +1,6 @@
+COVID STATS PARSERS
+by Aaron Williams
+
 covid_tracker_stats.py 
 Source: https://covidtracking.com/ 
 
